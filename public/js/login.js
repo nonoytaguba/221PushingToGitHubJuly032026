@@ -7,7 +7,7 @@ export const login = async (email, password) => {               //Lesson 189
     //Here we do a request
     const res = await axios({   
     method: 'POST',
-    url: 'http://127.0.0.1:3000/api/v1/users/login',
+    url: '/api/v1/users/login',   //'http://127.0.0.1:3000/api/v1/users/login', Lesson 222
     data: {
       email: email,
       password: password
@@ -31,7 +31,7 @@ export const logout = async () => {
     try{
         const res = await axios({
             method: 'GET',
-            url: 'http://127.0.0.1:3000/api/v1/users/logout',
+            url: '/api/v1/users/logout',
         });
         if(res.data.status = 'success') location.reload(true);
     }catch(err){
