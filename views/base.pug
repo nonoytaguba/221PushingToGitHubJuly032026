@@ -1,0 +1,60 @@
+doctype html
+
+html 
+  head 
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      //- | #{tour} is interpollation syntax
+      //- title Natours | #{tour}
+      title Natours | #{title}
+      //- <link rel="stylesheet" href="css/style.css"/>
+      link(rel='stylesheet' href='/css/style.css')
+      //Note
+      //- Your favicon may not be showing due to a caching issue, an incorrect file path,
+      //-  an unsupported image format,
+      //-  or problems with local file viewing. 
+      //- The link tag with rel="shortcut icon" is also outdated, though still widely supported.
+      //- Prefer rel="icon": The rel="shortcut icon" attribute is outdated.
+      //-  The correct and modern standard is to use just rel="icon".
+      //- link(rel='shortcut icon', type='image/png', href='/img/favicon.png')
+      link(rel='icon', href='/img/favicon.ico')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+
+   
+
+  body
+    // HEADER
+    include _header
+  
+    //-CONTENT
+    block content
+      h1 This is a placeholder heading
+
+    //FOOTER
+    include _footer
+   
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.10.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')
+    script(src='https://js.stripe.com/v3/')
+    script(src='/js/bundle.js')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

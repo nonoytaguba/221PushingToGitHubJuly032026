@@ -1,0 +1,28 @@
+doctype html
+
+html 
+  head 
+    //- | #{tour} is interpolation syntax
+    title Natours | #{tour}
+    //- <link rel="stylesheet" href="css/style.css"/>
+    link(rel='stylesheet' href='css/style.css')
+    //Note
+    //- Your favicon may not be showing due to a caching issue, an incorrect file path,
+    //-  an unsupported image format,
+    //-  or problems with local file viewing. 
+    //- The link tag with rel="shortcut icon" is also outdated, though still widely supported.
+    //- Prefer rel="icon": The rel="shortcut icon" attribute is outdated.
+    //-  The correct and modern standard is to use just rel="icon".
+    link(rel='shortcut icon', type='image/png', href='/img/favicon.png')
+    //- link(rel='icon', href='/img/favicon.ico')
+  body
+    //-So this kind of code here, that we wrote here, is called buffered code. Lesson 177, 11:37
+    h1= tour 
+    h2= user.toUpperCase()
+    //- h1 The Park Camper
+
+    //-unbuffered code, And so basically, unbuffered code is code that is not going to add anything to the output.
+    - const x = 9;
+    h2= 2 * x
+
+    p This is just some text
