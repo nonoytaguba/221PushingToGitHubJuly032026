@@ -60,7 +60,7 @@ mongoose
 
 //Start Server
 const port = process.env.PORT || 3000;
-const server = app.listen(port, () => {
+const server = app.listen(port, '0.0.0.0', () => {
     console.log(`app running on port ${port}...`)
 })
 
