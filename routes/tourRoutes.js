@@ -1,6 +1,6 @@
 const express = require('express');
 const tourController = require('../controllers/tourController')
-const authController = require('./../controllers/authcontroller');
+const authController = require('./../controllers/authController');
 // const reviewController = require('./../controllers/reviewController');  // removed from Lesson 159
 const reviewRouter = require('./../routes/reviewRoutes'); //exporting review router from Lesson 159
 
