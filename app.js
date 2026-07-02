@@ -9,6 +9,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser') //Lesson 189
 // const compression = require('compression');
+const corse = require('cors'); //Lesson 226
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -34,6 +35,18 @@ const requestTime = function (req, res, next) {
 app.use(requestTime)
 
 //1) GLOBAL MIDDLEWARES
+// Implement CORS (Cross Origin Resource Sharing)
+app.use(cors()); //Lesson 226
+// Access-Control-Allow-Origin *
+// api.natours.com, front-end natours.com
+// app.use(cors({
+//   origin: 'https://www.natours.com'
+// }))
+
+app.options('*', cors());
+// app.options('/ap/v1/tours/:id', cors());
+
+
 //Serving static files
 //Note from Lesson 177
 // So remember that by using express.static, we basically define that all the static assets
